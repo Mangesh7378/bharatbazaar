@@ -15,10 +15,11 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
+                        "/",
                         "/api/register",
                         "/api/login",
                         "/api/products/**",
-                        "/api/orders/**"   // ✅ add this
+                        "/api/orders/**"
                 ).permitAll()
                 .anyRequest().authenticated()
             );
