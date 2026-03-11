@@ -10,7 +10,7 @@ import mangesh.bharatbazaar.repository.OrderRepository;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class OrderController {
 
     @Autowired
